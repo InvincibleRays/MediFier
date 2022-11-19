@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("hospital.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(hospital.jpg);
     background-position: center;
 }
 .login{
@@ -11,7 +11,8 @@ body{
     margin: auto;
     margin-top: 25vh;
     background-color: grey;
-    opacity: 0.9;
+    opacity: 0.6;
+    box-shadow: 5px 5px 7px;
     border-radius: 10px;
 }
 .container
