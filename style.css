@@ -2,11 +2,10 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("careers-homepage.jpg");
-    /* background-color: #cccccc; */
+    background-image: url("hospital.jpg");
+    background-position: center;
 }
 .login{
-    /* padding-top: 44vh; */
     height: 50vh;
     width: 70vw;
     margin: auto;
@@ -14,7 +13,6 @@ body{
     background-color: grey;
     opacity: 0.9;
     border-radius: 10px;
-    /* margin-bottom: auto; */
 }
 .container
 {
@@ -25,15 +23,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.items
-{
-    flex-wrap: wrap;
-}
 form>input {
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px; */
     border-radius: 4px;
     border: 1px solid black;
     padding: 5px;
@@ -44,7 +34,8 @@ form>input {
 button{
     background-color:crimson;
     color: black;
-    border: 1px solid black;
+    width: 80px;
+    border: 1px solid grey;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -55,4 +46,5 @@ button:hover{
     cursor: pointer;
     background-color: green;
     color: white;
+    border: 3px solid white;
 }
