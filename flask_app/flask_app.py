@@ -3,10 +3,20 @@ from flask import Flask,render_template, request,jsonify
 import requests
 import sys
 import json
+import smtplib
+from email.message import EmailMessage
 
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+#variables
+email = ""
+smtp_username ="2205872@brunel.ac.uk"
+smtp_password = "M!dtit__n468__"
+smtp_send_from = "2205872@brunel.ac.uk"
+smtp_server = "smtp-mail.outlook.com"
+smtp_port = 587 
+smtp_use_tls = True 
 
 #app
 app = Flask(__name__)
@@ -15,9 +25,11 @@ app = Flask(__name__)
 def members():
     return render_template('login.html')
 
-@app.route('/bot')
+@app.route('/bot', methods=['POST'])
 def bot():
-    return render_template('website.html')
+    email = request.form['mail']
+    return render_template('website.html',email=email)
+    
 
 @app.route('/handle_data', methods=['POST'])
 def handle_data():
@@ -40,6 +52,32 @@ def handle_data():
         searchinfo["distance"] = res_distance.text
         searchinfo["address"] = res_address.text
         arr_info.append(searchinfo)
+
+    # body = "Subject: ALERT: Potential NHS Covid Vaccine Appointment Available.\n\n"
+    # try:
+    #     smtpObj = smtplib.SMTP(smtp_server, smtp_port)
+    # except Exception as e:
+    #     print(e)
+    # smtpObj.ehlo()
+    # if smtp_use_tls == True :
+    #     smtpObj.starttls()
+    # smtpObj.login(smtp_username, smtp_password) 
+    # smtpObj.sendmail(smtp_send_from, email, body) 
+    # smtpObj.quit()
+    body = "some content"
+    mail = EmailMessage()
+    mail.set_content(body, subtype='html')   
+
+    to = "you@work.com"
+    mail['From'] = "siddhantsood246@gmail.com"
+    mail['To'] = email
+    # mail['Cc'] = ""
+    # mail['Bcc'] = ""
+    mail['Subject'] = "Hello"
+
+    smtp_connection = smtplib.SMTP("smtp.gmail.com", 25)  
+    status = smtp_connection.send_message(mail)
+
     return render_template('test.html',project=arr_info)
 
 

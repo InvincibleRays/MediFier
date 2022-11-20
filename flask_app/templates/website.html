@@ -76,6 +76,8 @@
 
     </div>
     <script>
+        let mail = {{email|tojson}};
+        console.log(mail)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 console.log(entry)
