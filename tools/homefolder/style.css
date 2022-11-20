@@ -141,9 +141,64 @@ button:hover {
 
 /*----- second page -----*/
 
-.course{
+.secondpage {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
+
+.secondpage h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.secondpage p{
+    color: black ;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row  {
+    margin-top: 5%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.features{
+    flex-basis: 31%;
+    background: #aaaaaa;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.secondpage h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.features:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom:25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
