@@ -1,24 +1,24 @@
 <html lang="en">
 <head>
     <title>Homepage</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="../static/webdesign.css">
+    <script defer src="../static/app.js"></script>
     <script src="https://kit.fontawesome.com/e21ea0cfb7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="hidden">
         <div class= "banner"> 
             <div class = "navbar">
-                <img src="hospitalogo.png" class="logo">
+                <img src="../static/hospitalogo.png" class="logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#cont">Contact</a></li>
                 </ul>
             </div>
 
-            <div class="content">
+            <div class="content" id="home">
                 <h1> HELPING YOU MEDICALLY </h1>
                 <p> GET NOTIFIED ON YOUR NEAREST GP AVAILABILITY, <br> USE OUR SEARCHBOT TO FIND THE NEAREST AVAILABLE MEDICAL SERVICE TO YOU</p>
                 <div>
@@ -29,7 +29,7 @@
         </div>
     </div>
    
-    <section class="secondpage">
+    <section class="secondpage" id="faq">
         <section class="hidden">
             <h1>Information</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing brelit. </p>
@@ -54,18 +54,18 @@
         </section>
     </section>
 
-    <section class="searchpage">
+    <section class="searchpage" id="search">
     
             <div class="container">
-                <form>
+                <form action="./handle_data" method="post">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="enter postcode">
+                    <input type="text" placeholder="enter postcode" name="projectFilepath">
                     <button id="searchbutton" type="submit">Search</button>
                 </form>
             </div>
         
     </section>
-    <section class="footer">
+    <section class="footer" id="cont">
         <h4>About Us</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex provident voluptatibus, atque porro neque accusamus, reiciendis in iure <br> ipsam velit maxime obcaecati quos culpa aliquid odio ea, quisquam temporibus.</p>
 
@@ -75,6 +75,20 @@
 
 
     </div>
-    
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show');
+                } else{
+                    entry.target.classList.remove('show');
+                }
+
+            });
+        });
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>

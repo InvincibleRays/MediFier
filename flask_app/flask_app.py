@@ -1,7 +1,9 @@
+import __main__
 from flask import Flask,render_template, request,jsonify
 import requests
 import sys
 import json
+
 from bs4 import BeautifulSoup
 from datetime import datetime
 
@@ -15,8 +17,7 @@ def members():
 
 @app.route('/bot')
 def bot():
-    name = ["members1","members2"]
-    return render_template('bot.html',name=name)
+    return render_template('website.html')
 
 @app.route('/handle_data', methods=['POST'])
 def handle_data():
