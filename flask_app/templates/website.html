@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="../static/webdesign.css">
     <script defer src="../static/app.js"></script>
     <script src="https://kit.fontawesome.com/e21ea0cfb7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/chat.css" />
+    <script src="../static/response.js" defer></script>
+    <script src="../static/app.js" defer></script>
 </head>
 <body>
     <div class="hidden">
@@ -70,10 +75,34 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex provident voluptatibus, atque porro neque accusamus, reiciendis in iure <br> ipsam velit maxime obcaecati quos culpa aliquid odio ea, quisquam temporibus.</p>
 
     </section>
-
-
-
-
+    <!-- Chatlayout -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <button id="chatBtn" class="chatBtn">
+      <span class="material-symbols-outlined">
+        comment
+        </span>
+    </button>
+    <!-- <script src="../static/extra.js"></script> -->
+    <script src="../static/script.js"></script>
+    <div class="container-nilay">
+      <div class="chat-header">
+        
+        <div class="title">Chat</div>
+        
+      </div>
+      <div class="chat-body"></div>
+      <div class="chat-input">
+        <div class="input-sec">
+          <input type="text" id="txtInput" placeholder="Type here" autofocus />
+          
+        </div>
+        <div class="send">
+          <span class="material-symbols-outlined">
+            send
+            </span>
+        </div>
+      </div>
+    </div>
     </div>
     <script>
         let mail = {{email|tojson}};
