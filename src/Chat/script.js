@@ -13,3 +13,18 @@ $('#chatBtn').on('click', function(e)  {
       overlay.style.display = 'block';
     }  
   });
+
+  function()
+  var firstname1 = document.getElementById("fname");
+  var postcode = document.getElementById("pcode");
+  var travel = document.getElementById("trav");
+  var week = document.getElementById("week");
+  var time = document.getElementById("time");FCERQQQ
+
+//  document.writeln(firstname1+postcode+travel+week+time).value;
+
+  const input = document.querySelector('#input');
+  input.addEventListener('change', (e) => {
+  const isValid = e.target.checkValidity();
+  console.log(isValid);
+  });

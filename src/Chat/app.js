@@ -63,9 +63,6 @@ const setScrollPosition = () => {
 
 
 
-
-
-
 /*const chatBtn = document.querySelector('.chat-btn');
 chatBtn.addEventListener('click', ()=>{
     if (popup.style.getPropertyValue("display") == "none")

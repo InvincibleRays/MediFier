@@ -1,12 +1,16 @@
 const responseObj = {
     hi: "Hey ! How are you doing ?",
     hey: "Hey! What's Up",
+    name: new String(),
+    pcode:new Int(),
     today: new Date().toDateString(),
+    week: new String(),
     time: new Date().toLocaleTimeString(),
+    
   };
 
 
-const answers = ["What is your name?","What is your postcode?", "How far are you willing to travel?", "Would you be available on weekdays or weekends?", "What time of the day do you prefer?" ];
+const answers = [,"", "", "", "What time of the day do you prefer?" ];
 
 
 
