@@ -64,21 +64,21 @@ def handle_data():
     # smtpObj.login(smtp_username, smtp_password) 
     # smtpObj.sendmail(smtp_send_from, email, body) 
     # smtpObj.quit()
-    body = "some content"
-    mail = EmailMessage()
-    mail.set_content(body, subtype='html')   
+    # body = "some content"
+    # mail = EmailMessage()
+    # mail.set_content(body, subtype='html')   
 
-    to = "you@work.com"
-    mail['From'] = "siddhantsood246@gmail.com"
-    mail['To'] = email
-    # mail['Cc'] = ""
-    # mail['Bcc'] = ""
-    mail['Subject'] = "Hello"
+    # to = "you@work.com"
+    # mail['From'] = "siddhantsood246@gmail.com"
+    # mail['To'] = email
+    # # mail['Cc'] = ""
+    # # mail['Bcc'] = ""
+    # mail['Subject'] = "Hello"
 
-    smtp_connection = smtplib.SMTP("smtp.gmail.com", 25)  
-    status = smtp_connection.send_message(mail)
+    # smtp_connection = smtplib.SMTP("smtp.gmail.com", 25)  
+    # status = smtp_connection.send_message(mail)
 
-    return render_template('test.html',project=arr_info)
+    return render_template('searchdisplay.html',project=arr_info)
 
 
 if __name__ == "__main__":
