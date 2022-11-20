@@ -11,8 +11,8 @@
     <div class= "banner"> 
         <div class = "navbar">
             <img src="../static/hospitalogo.png" class="logo">
-            <ul >
-                <li ><a href="#return">Back to Mainpage</a></li>
+            <ul>
+                <li ><a href="./bot">Back to Mainpage</a></li>
             </ul>
         </div>
     </div>
@@ -27,27 +27,13 @@
                 <div class="features">
                     <div>
                         <div>
-                            <h3 class="orgname"> Streatfield Health Centre</h3>
+                            <h3 class="orgname1"> </h3>
                         </div>
-                        <div class="address">
-                            <p>1 Streatfield Road, Kenton, Harrow, Middlesex, HA3 9BP</p>
+                        <div class="address1">
+                            <p></p>
                         </div>
-                        <div class="distance">
-                            <p>0.9 miles</p>
-                        </div>
-                        <div>
-                            <button>Get details mailed</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3 class="orgname"> Streatfield Health Centre</h3>
-                        </div>
-                        <div class="address">
-                            <p>1 Streatfield Road, Kenton, Harrow, Middlesex, HA3 9BP</p>
-                        </div>
-                        <div class="distance">
-                            <p>0.9 miles</p>
+                        <div class="distance1">
+                            <p></p>
                         </div>
                         <div>
                             <button>Get details mailed</button>
@@ -55,13 +41,13 @@
                     </div>
                     <div>
                         <div>
-                            <h3 class="orgname"> Streatfield Health Centre</h3>
+                            <h3 class="orgname2"> </h3>
                         </div>
-                        <div class="address">
-                            <p>1 Streatfield Road, Kenton, Harrow, Middlesex, HA3 9BP</p>
+                        <div class="address2">
+                            <p></p>
                         </div>
-                        <div class="distance">
-                            <p>0.9 miles</p>
+                        <div class="distance2">
+                            <p></p>
                         </div>
                         <div>
                             <button>Get details mailed</button>
@@ -69,13 +55,27 @@
                     </div>
                     <div>
                         <div>
-                            <h3 class="orgname"> Streatfield Health Centre</h3>
+                            <h3 class="orgname3"> </h3>
                         </div>
-                        <div class="address">
-                            <p>1 Streatfield Road, Kenton, Harrow, Middlesex, HA3 9BP</p>
+                        <div class="address3">
+                            <p></p>
                         </div>
-                        <div class="distance">
-                            <p>0.9 miles</p>
+                        <div class="distance3">
+                            <p></p>
+                        </div>
+                        <div>
+                            <button>Get details mailed</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="orgname4"> </h3>
+                        </div>
+                        <div class="address4">
+                            <p></p>
+                        </div>
+                        <div class="distance4">
+                            <p></p>
                         </div>
                         <div>
                             <button>Get details mailed</button>
@@ -83,22 +83,29 @@
                     </div>
         </div>
         </section>
-    </section>
+    </section>q
     <p id="done"></p>
     <script>
-        /*let a = document.getElementById("done");
         let array = {{project|tojson}};
-        console.log(array)*/
-        for(var i = 0; i < array.length; i++){
-            a.textContent += array[i].address;
-            a.textContent += array[i].orgname;
-            a.textContent += array[i].distance;
-
+        console.log(array)
+        // let i =1;
+        // let a = `.orgname${i}`;
+        // let org = document.querySelector(a);
+        // org.textContent += array[i].orgname;
+        // org.textContent += array[0].orgname;
+        for(let i = 1; i < 5; i++){
+            let a = `.orgname${i}`;
+            let b = `.address${i}`;
+            let c = `.distance${i}`;
+            let org = document.querySelector(a);
+            let add = document.querySelector(b);
+            let dis = document.querySelector(c);
+            org.textContent += array[i].orgname;
+            add.textContent += array[i].address;
+            dis.textContent += array[i].distance;
         }
 
-        obj.function1 = function(){
-
-        }
+        // obj.function1 = function(){
     </script>
 </body>
 </html>

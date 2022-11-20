@@ -3,10 +3,11 @@ from flask import Flask,render_template, request,jsonify
 import requests
 import sys
 import json
+import smtplib
+from email.message import EmailMessage
 
 from bs4 import BeautifulSoup
 from datetime import datetime
-
 
 #app
 app = Flask(__name__)
@@ -15,9 +16,11 @@ app = Flask(__name__)
 def members():
     return render_template('login.html')
 
-@app.route('/bot')
+@app.route('/bot', methods=['POST'])
 def bot():
-    return render_template('website.html')
+    email = request.form['mail']
+    return render_template('website.html',email=email)
+    
 
 @app.route('/handle_data', methods=['POST'])
 def handle_data():
@@ -28,20 +31,16 @@ def handle_data():
     page = requests.get(new_url)
     soup = BeautifulSoup(page.content,"html.parser")
     arr_info = []
-    searchinfo = {}
     for i in range(5):
-        st = f"orgname_{i}"
-        std = f"distance_{i}"
-        sta = f"address_{i}"
+        st = "orgname_%s" %i
+        std = "distance_%s" %i
+        sta = "address_%s" %i
         res_orgname = soup.find(id = st)
         res_distance = soup.find(id = std)
         res_address = soup.find(id = sta)
-        searchinfo["orgname"] = res_orgname.text
-        searchinfo["distance"] = res_distance.text
-        searchinfo["address"] = res_address.text
-        arr_info.append(searchinfo)
-    return render_template('searchdisplay.html',project=arr_info)
+        arr_info.append({"orgname":res_orgname.text,"distance":res_distance.text,"address":res_address.text})
 
+    return render_template('searchdisplay.html',project=arr_info)
 
 if __name__ == "__main__":
     app.run(debug=True)
