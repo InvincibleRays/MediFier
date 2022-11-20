@@ -40,7 +40,7 @@ def handle_data():
         searchinfo["distance"] = res_distance.text
         searchinfo["address"] = res_address.text
         arr_info.append(searchinfo)
-    return render_template('test.html',project=arr_info)
+    return render_template('searchdisplay.html',project=arr_info)
 
 
 if __name__ == "__main__":
