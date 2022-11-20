@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(/Users/siddhantsood/Desktop/HackBrunel/hackbros/tools/hospital.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(hospital.jpg);
     background-position: center;
 }
 .login{
