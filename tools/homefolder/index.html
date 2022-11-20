@@ -2,6 +2,7 @@
 <head>
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e21ea0cfb7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class= "banner"> 
@@ -19,8 +20,8 @@
             <h1> HELPING YOU MEDICALLY </h1>
             <p> GET NOTIFIED ON YOUR NEAREST GP AVAILABILITY, <br> USE OUR SEARCHBOT TO FIND THE NEAREST AVAILABLE MEDICAL SERVICE TO YOU</p>
             <div>
-                <button type="button"><span></span>Fire</button>
-                <button type="button"><span></span>Ice</button>
+                <button id="directbutton" type="button"><span></span>Fire</button>
+                <button id ="directbutton" type="button"><span></span>Ice</button>
             </div>
         </div>
     </div>
@@ -54,8 +55,9 @@
     <section class="searchpage">
         <div class="container">
             <form>
+                <i class="fas fa-search"></i>
                 <input type="text" placeholder="enter postcode">
-                <button id="directbutton" type="submit">Search</button>
+                <button id="searchbutton" type="submit">Search</button>
             </form>
         </div>
         
