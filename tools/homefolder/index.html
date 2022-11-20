@@ -2,64 +2,67 @@
 <head>
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
     <script src="https://kit.fontawesome.com/e21ea0cfb7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class= "banner"> 
-        <div class = "navbar">
-            <img src="hospitalogo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Search</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
+    <div class="hidden">
+        <div class= "banner"> 
+            <div class = "navbar">
+                <img src="hospitalogo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
 
-        <div class="content">
-            <h1> HELPING YOU MEDICALLY </h1>
-            <p> GET NOTIFIED ON YOUR NEAREST GP AVAILABILITY, <br> USE OUR SEARCHBOT TO FIND THE NEAREST AVAILABLE MEDICAL SERVICE TO YOU</p>
-            <div>
-                <button id="directbutton" type="button"><span></span>Fire</button>
-                <button id ="directbutton" type="button"><span></span>Ice</button>
+            <div class="content">
+                <h1> HELPING YOU MEDICALLY </h1>
+                <p> GET NOTIFIED ON YOUR NEAREST GP AVAILABILITY, <br> USE OUR SEARCHBOT TO FIND THE NEAREST AVAILABLE MEDICAL SERVICE TO YOU</p>
+                <div>
+                    <button id="directbutton" type="button"><span></span>Fire</button>
+                    <button id ="directbutton" type="button"><span></span>Ice</button>
+                </div>
             </div>
         </div>
     </div>
    
     <section class="secondpage">
-        <h1>Information</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing brelit. </p>
+        <section class="hidden">
+            <h1>Information</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing brelit. </p>
 
-        <div class="row">
-            <div class="features">
-                <h3>Chatbot</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro sed temporibus unde accusamus reiciendis, quidem nemo fuga maiores natus, magnam autem est esse id voluptatibus molestias saepe veniam velit?</p>
-                
-            </div>
-            <div class="features">
-                <h3>Search System</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam beatae sunt labore quam illum similique ipsum amet assumenda voluptate iusto commodi expedita nesciunt reiciendis voluptatibus vero non neque, nulla obcaecati!</p>
+            <div class="row">
+                <div class="features">
+                    <h3>Chatbot</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro sed temporibus unde accusamus reiciendis, quidem nemo fuga maiores natus, magnam autem est esse id voluptatibus molestias saepe veniam velit?</p>
+                    
+                </div>
+                <div class="features">
+                    <h3>Search System</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam beatae sunt labore quam illum similique ipsum amet assumenda voluptate iusto commodi expedita nesciunt reiciendis voluptatibus vero non neque, nulla obcaecati!</p>
 
-            </div>
-            <div class="features">
-                <h3>Search System</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam beatae sunt labore quam illum similique ipsum amet assumenda voluptate iusto commodi expedita nesciunt reiciendis voluptatibus vero non neque, nulla obcaecati!</p>
+                </div>
+                <div class="features">
+                    <h3>Search System</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam beatae sunt labore quam illum similique ipsum amet assumenda voluptate iusto commodi expedita nesciunt reiciendis voluptatibus vero non neque, nulla obcaecati!</p>
 
-            </div>  
+                </div>  
         </div>
-
-        </div>
-
+        </section>
     </section>
 
     <section class="searchpage">
-        <div class="container">
-            <form>
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="enter postcode">
-                <button id="searchbutton" type="submit">Search</button>
-            </form>
-        </div>
+    
+            <div class="container">
+                <form>
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="enter postcode">
+                    <button id="searchbutton" type="submit">Search</button>
+                </form>
+            </div>
         
     </section>
     <section class="footer">
